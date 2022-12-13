@@ -27,7 +27,7 @@ void Menu::showMenu()
 	do {
 		cout << "--- SMUGGLER GAME ---\n";
 		cout << endl << endl; 
-		cout << "1) Create City\n";
+		cout << "1) Display Items\n";
 		cout << "2) Travel to a City\n";
 		cout << "3) Display Money\n";
 		cout << "4) Display City Name\n";
@@ -43,9 +43,7 @@ void Menu::showMenu()
 		{
 		case 1:
 		{
-			cout << "Create a City Name.\n";
-			string cityName;
-			myCities.push_back(createCity(cityName, cityName)); 
+			printItem();
 			break;
 		}
 		case 2:
@@ -87,12 +85,25 @@ void Menu::displayMoney()
 	cout << "Your balance is $ " << fixed << setprecision(2) << this->getMoney() << ".\n";
 }
 
-City Menu::createCity(string objectName,string city )
+
+void Menu::addItem(Item item)
 {
-	City objectName(city); 
+	myItems.push_back(item);
+}
 
+void Menu::getItems(Item& item) const
+{
+	cout << " Item Name: " << item.getItemName()
+		<< " \n Item Price $" << item.getItemPrice()
+		<< boolalpha << "\n Avaiable to negotiate : "
+		<< item.getItemStatus() << endl << endl;
+}
 
-	return objectName;
+void Menu::printItem()
+{
+	for (int i{ 0 }; i < myItems.size(); i++) {
+		getItems(myItems.at(i));
+	}
 }
 
 //void Menu::sellingItems(Item item)

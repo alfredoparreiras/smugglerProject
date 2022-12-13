@@ -1,15 +1,16 @@
 #pragma once
-#include<iostream>
 #include"City.h"
 #include"Item.h"
+#include<iostream>
 #include<vector>
 using namespace std; 
 
 class Menu : public City, public Item {
-private: 
+public: 
 	string userName; 
 	double money; 
 	vector<City> myCities;
+	vector<Item> myItems;
 	
 
 public: 
@@ -19,7 +20,7 @@ public:
 	//Getters and Setters
 	string getUserName() const; 
 	double getMoney() const; 
-	void getItems() const; 
+	void getItems(Item&) const; 
 
 	//Methods 
 	void showMenu(); 
@@ -28,5 +29,7 @@ public:
 	void buyingItems(); 
 	void displayMoney(); 
 	City createCity(string,string);
+	void addItem(Item);
+	void printItem();
 
 };

@@ -8,8 +8,7 @@ class City : public Item{
 
 private: 
 	string cityName; 
-	Item myitens[5];
-	
+	int incrementorOfPrices;
 
 public: 
 	
