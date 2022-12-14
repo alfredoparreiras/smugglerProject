@@ -5,24 +5,22 @@ using namespace std;
 
 
 class City : public Item{
-
 private: 
 	string cityName; 
-	int incrementorOfPrices;
-
-public: 
+	vector<Item> myItems;
 	
-	//Constructor
+public: 
 	City(); 
-	City(string);
-
+	City(string, Item, Item, Item, Item, Item);
 
 	//Getters and Setters
-	void setCityName(string);
 	string getCityName() const; 
 
-	// Methods
-	double displayItemsPriceToBuy(Item);
-	double displayItemsPriceToSell(Item);
+	//Method
+	void displayCityName() const; 
+	void addingItem(Item);
+	void printTemplate(); 
+	Item buyItem();
+	Item sellItem();
 
 };

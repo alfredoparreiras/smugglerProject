@@ -6,30 +6,26 @@
 using namespace std; 
 
 class Menu : public City, public Item {
-public: 
+private: 
 	string userName; 
-	double money; 
-	vector<City> myCities;
-	vector<Item> myItems;
-	
+	double userMoney; 
+	vector<City> myCities; 
+	int cityIndex; 
+	Item userInventory[5];
+	int inventoryIndex; 
 
 public: 
-	//Constructors
-	Menu(string, double);
+	
+	// Constructors
+	Menu(string, double,City, City, City, City, City);
 
-	//Getters and Setters
-	string getUserName() const; 
-	double getMoney() const; 
-	void getItems(Item&) const; 
-
-	//Methods 
-	void showMenu(); 
-	void displayCityName(); 
-	void sellingItems(Item); 
-	void buyingItems(); 
-	void displayMoney(); 
-	City createCity(string,string);
-	void addItem(Item);
-	void printItem();
-
+	// Getters and Setters
+	int getCityIndex() const;
+	double getUserMoney() const; 
+	
+	// Methods
+	void showMenu();
+	void displayUserMoney();
+	void displayInventory();
+	void checkInventory();
 };

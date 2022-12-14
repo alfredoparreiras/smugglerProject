@@ -1,5 +1,5 @@
 ﻿  Menu.cpp
 C:\Users\aalfr\source\repos\SmugglerProject\Smuggler\Smuggler\Menu.h(8,21): warning C4584: 'Menu': base-class 'Item' is already a base-class of 'City'
-C:\Users\aalfr\source\repos\SmugglerProject\Smuggler\Smuggler\Item.h(5,7): message : see declaration of 'Item'
+C:\Users\aalfr\source\repos\SmugglerProject\Smuggler\Smuggler\Item.h(6,7): message : see declaration of 'Item'
 C:\Users\aalfr\source\repos\SmugglerProject\Smuggler\Smuggler\City.h(7,7): message : see declaration of 'City'
   Smuggler.vcxproj -> C:\Users\aalfr\source\repos\SmugglerProject\Smuggler\x64\Debug\Smuggler.exe

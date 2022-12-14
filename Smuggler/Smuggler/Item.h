@@ -1,29 +1,31 @@
 #pragma once
 #include<iostream>
+#include<vector>
 using namespace std;
 
 class Item {
 private: 
 	string itemName; 
-    double itemPrice; 
+	double itemPrice; 
 	bool isAvaiable;
+	
 
 public: 
-
-	//Constructor
-	Item();
+	//Constructors
+	Item(); 
 	Item(string, double);
 
 	// Getters and Setters
-	void setItemName(string);
-	void setItemPrice(double);
-	void setItemStatus(bool); 
+
 	string getItemName() const; 
-	double getItemPrice() const;
-	bool getItemStatus() const;
+	double getItemPrice() const; 
+	bool getItemStatus() const; 
 
+	void setIsAvaiable(bool status);
 
-	//Methods
+	// Methods
+	void displayItem(); 
+
 
 
 };

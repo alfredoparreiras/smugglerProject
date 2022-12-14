@@ -4,32 +4,17 @@ Item::Item()
 {
 }
 
-Item::Item(string itemName, double itemPrice) : itemName{itemName}, itemPrice{itemPrice}
+Item::Item(string itemName, double itemPrice)
 {
-	this->isAvaiable = true; 
-}
-
-void Item::setItemName(string itemName)
-{
-	this->itemName = itemName;
-}
-
-void Item::setItemPrice(double itemPrice)
-{
-	this->itemPrice = itemPrice; 
-}
-
-void Item::setItemStatus(bool status)
-{
-	this->isAvaiable = status;
+	this->itemName = itemName; 
+	this->itemPrice = itemPrice;
+	this->isAvaiable = true;
 }
 
 string Item::getItemName() const
 {
 	return itemName;
 }
-
-
 
 double Item::getItemPrice() const
 {
@@ -40,3 +25,18 @@ bool Item::getItemStatus() const
 {
 	return isAvaiable;
 }
+
+void Item::setIsAvaiable(bool status)
+{
+	this->isAvaiable = status;
+}
+
+void Item::displayItem()
+{
+	cout << "\nItem Name: " << getItemName() <<
+		"\nItem Price: $" << getItemPrice() <<
+		"\nAvaiable : " << boolalpha << getItemStatus() << endl;
+
+}
+
+
